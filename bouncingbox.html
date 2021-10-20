@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <style> 
+        div{
+            height:50px;
+            width:50px;
+            background-color:red;
+            position:absolute;
+        }    
+        </style>
+    </head>
+    <body>
+        <div id="box"></div>
+    </body>
+</html>
+<script>
+    var box = document.getElementById("box")
+    var x = 0
+    setInterval(update, 50)
+    function update(){
+        box.style.left = x + "px"
+        x= x + 5
+        if(x===window.innerWidth){
+            x= x -5
+        }
+    }
+</script>
