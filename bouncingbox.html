@@ -3,10 +3,12 @@
     <head>
         <style> 
         div{
-            height:50px;
-            width:50px;
-            background-color:red;
+            height:100px;
+            width:100px;
+            background-color:#ff0000;
             position:absolute;
+            border-radius: 50%;
+            margin-block-start: 25%;
         }    
         </style>
     </head>
@@ -17,12 +19,16 @@
 <script>
     var box = document.getElementById("box")
     var x = 0
-    setInterval(update, 50)
+    var speed = 5
+    setInterval(update, 17)
     function update(){
         box.style.left = x + "px"
-        x= x + 5
-        if(x===window.innerWidth){
-            x= x -5
+        x= x + speed
+        if(x>=485){
+            speed = - speed
+        }
+        if(x<=0){
+            speed = - speed
         }
     }
 </script>
