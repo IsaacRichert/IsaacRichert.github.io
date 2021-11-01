@@ -16,11 +16,12 @@
 </html>
 <script>
     var box = document.getElementById("box")
+    document.getElementById("box").addEventListener("click",boxclick)
     var x = 0
     var y = 0
     var speedx = 10
     var speedy = 10
-    setInterval(update, 17)
+    setInterval(update, 20)
     function update(){
         box.style.left = x + "px"
         box.style.top = y + "px"
@@ -38,5 +39,8 @@
         if(y<=0){
             speedy = - speedy
         }
+    }
+    function boxclick(){
+        alert()
     }
 </script>
