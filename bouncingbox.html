@@ -41,6 +41,11 @@
         }
     }
     function boxclick(){
-        speedx = speedx + 5
+        if(speedx>0){
+            speedx = speedx + 10
+        }
+        if(speedx<0){
+            speedx = speedx - 10
+        }
     }
 </script>
